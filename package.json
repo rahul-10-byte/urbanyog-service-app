@@ -1,0 +1,28 @@
+{
+  "name": "verify-prod-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "vercel-build": "node app.js",
+    "build": "node app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "await-each": "^1.1.0",
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.0",
+    "joi": "^17.13.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.3",
+    "request": "^2.88.2",
+    "sequelize": "^6.37.3"
+  }
+}

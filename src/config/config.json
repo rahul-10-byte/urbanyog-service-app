@@ -1,0 +1,28 @@
+{
+    "development": {
+        "username": "admin",
+        "password": "urban#gabru$123",
+        "database": "uglifest_custoengage_urbanyog",
+        "host": "ug-application-db-server.catvfpilxwys.ap-south-1.rds.amazonaws.com",
+        "dialect": "mysql"
+      },
+      
+    "test": {
+      "username": "root",
+      "password": null,
+      "database": "uglifest_custoengage_urbanyog",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    
+    "production": {
+      "username": "admin",
+        "password": "urban#gabru$123",
+        "database": "uglifest_custoengage_urbanyog",
+        "host": "ug-application-db-server.catvfpilxwys.ap-south-1.rds.amazonaws.com",
+        "dialect": "mysql"
+    },
+  
+    "secret": "thisisDeaDKilleRwhomadethisbackend"
+  }
+  
