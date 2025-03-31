@@ -23,8 +23,21 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );
+
   product_master.associate = function (models) {
-    // associations can be defined here
+    // Define association with qr_master
+    product_master.hasMany(models.qr_master, {
+      foreignKey: "pid",
+      sourceKey: "pid",
+    });
+
+    // 🔹 Define association with cust_qr_scan_order
+    product_master.hasMany(models.cust_qr_scan_order, {
+      foreignKey: "bought_product_pid",
+      sourceKey: "pid",
+      
+    });
   };
+
   return product_master;
 };
