@@ -1,28 +1,68 @@
 {
-    "development": {
-        "username": "admin",
-        "password": "urban#gabru$123",
-        "database": "uglifest_custoengage_urbanyog",
-        "host": "ug-application-db-server.catvfpilxwys.ap-south-1.rds.amazonaws.com",
-        "dialect": "mysql"
+  "development": {
+    "username": "admin",
+    "password": "urban#gabru$123",
+    "database": "uglifest_custoengage_urbanyog",
+    "host": "ug-application-db-server.catvfpilxwys.ap-south-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
       },
-      
-    "test": {
-      "username": "root",
-      "password": null,
-      "database": "uglifest_custoengage_urbanyog",
-      "host": "127.0.0.1",
-      "dialect": "mysql"
+      "connectTimeout": 60000
     },
-    
-    "production": {
-      "username": "admin",
-        "password": "urban#gabru$123",
-        "database": "uglifest_custoengage_urbanyog",
-        "host": "ug-application-db-server.catvfpilxwys.ap-south-1.rds.amazonaws.com",
-        "dialect": "mysql"
+    "pool": {
+      "max": 50,
+      "min": 10,
+      "acquire": 60000,
+      "idle": 10000,
+      "evict": 10000
+    }
+  },
+
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "uglifest_custoengage_urbanyog",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      },
+      "connectTimeout": 60000
     },
-  
-    "secret": "thisisDeaDKilleRwhomadethisbackend"
-  }
-  
+    "pool": {
+      "max": 50,
+      "min": 10,
+      "acquire": 60000,
+      "idle": 10000,
+      "evict": 10000
+    }
+  },
+
+  "production": {
+    "username": "admin",
+    "password": "urban#gabru$123",
+    "database": "uglifest_custoengage_urbanyog",
+    "host": "ug-application-db-server.catvfpilxwys.ap-south-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      },
+      "connectTimeout": 60000
+    },
+    "pool": {
+      "max": 50,
+      "min": 10,
+      "acquire": 60000,
+      "idle": 10000,
+      "evict": 10000
+    }
+  },
+  "secret": "thisisDeaDKilleRwhomadethisbackend"
+}

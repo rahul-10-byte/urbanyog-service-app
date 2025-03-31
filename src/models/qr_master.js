@@ -21,8 +21,14 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );
+
   qr_master.associate = function (models) {
-    // associations can be defined here
+    // Define association with product_master
+    qr_master.belongsTo(models.product_master, {
+      foreignKey: "pid",
+      targetKey: "pid",
+    });
   };
+
   return qr_master;
 };
